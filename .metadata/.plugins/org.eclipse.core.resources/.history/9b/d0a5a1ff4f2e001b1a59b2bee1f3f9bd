@@ -1,0 +1,23 @@
+/*
+ * arrays.c
+ *
+ *  Created on: 24 Nov 2020
+ *      Author: afeka
+ */
+
+#include "arrays.h"
+
+void printArray(int* arr, int size)
+{
+	for(int i = 0; i < size; i++, arr++)
+		printf("%5d", *arr);
+}
+
+void printMatrix(int** matrix, int rows, int cols)
+{
+	for(int i = 0; i < rows; i++, *matrix++)
+	{
+		printArray(*matrix, cols);
+		printf("\n");
+	}
+}

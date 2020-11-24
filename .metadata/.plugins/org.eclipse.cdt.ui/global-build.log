@@ -904,3 +904,285 @@ Invoking: Cross GCC Linker
 gcc  -o "lab"  ./main.o ./str_functions.o ./str_quests.o   
 Finished building target: lab
  
+14:18:36 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../arrays.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"arrays.d" -MT"arrays.o" -o "arrays.o" "../arrays.c"
+../arrays.c: In function ‘printArray’:
+../arrays.c:13:3: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   printf("%5d", *arr);
+   ^~~~~~
+../arrays.c:13:3: warning: incompatible implicit declaration of built-in function ‘printf’
+../arrays.c:13:3: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../arrays.c: In function ‘printMatrix’:
+../arrays.c:21:3: warning: incompatible implicit declaration of built-in function ‘printf’
+   printf("\n");
+   ^~~~~~
+../arrays.c:21:3: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+Finished building: ../arrays.c
+ 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function ‘main’:
+../main.c:24:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* arr = {1,2,3,4,5}
+              ^
+../main.c:24:14: note: (near initialization for ‘arr’)
+../main.c:24:16: warning: excess elements in scalar initializer
+  int* arr = {1,2,3,4,5}
+                ^
+../main.c:24:16: note: (near initialization for ‘arr’)
+../main.c:24:18: warning: excess elements in scalar initializer
+  int* arr = {1,2,3,4,5}
+                  ^
+../main.c:24:18: note: (near initialization for ‘arr’)
+../main.c:24:20: warning: excess elements in scalar initializer
+  int* arr = {1,2,3,4,5}
+                    ^
+../main.c:24:20: note: (near initialization for ‘arr’)
+../main.c:24:22: warning: excess elements in scalar initializer
+  int* arr = {1,2,3,4,5}
+                      ^
+../main.c:24:22: note: (near initialization for ‘arr’)
+../main.c:25:2: error: expected ‘,’ or ‘;’ before ‘int’
+  int size = 5;
+  ^~~
+../main.c:26:18: error: ‘size’ undeclared (first use in this function); did you mean ‘size_t’?
+  printArray(arr, size);
+                  ^~~~
+                  size_t
+../main.c:26:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [main.o] Error 1
+subdir.mk:27: recipe for target 'main.o' failed
+"make all" terminated with exit code 2. Build might be incomplete.
+14:19:05 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function ‘main’:
+../main.c:24:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* arr = {1,2,3,4,5};
+              ^
+../main.c:24:14: note: (near initialization for ‘arr’)
+../main.c:24:16: warning: excess elements in scalar initializer
+  int* arr = {1,2,3,4,5};
+                ^
+../main.c:24:16: note: (near initialization for ‘arr’)
+../main.c:24:18: warning: excess elements in scalar initializer
+  int* arr = {1,2,3,4,5};
+                  ^
+../main.c:24:18: note: (near initialization for ‘arr’)
+../main.c:24:20: warning: excess elements in scalar initializer
+  int* arr = {1,2,3,4,5};
+                    ^
+../main.c:24:20: note: (near initialization for ‘arr’)
+../main.c:24:22: warning: excess elements in scalar initializer
+  int* arr = {1,2,3,4,5};
+                      ^
+../main.c:24:22: note: (near initialization for ‘arr’)
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:19:35 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:19:39 **** Incremental Build of configuration Debug for project lab ****
+make all 
+make: Nothing to be done for 'all'.
+14:21:21 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function ‘main’:
+../main.c:35:14: warning: passing argument 1 of ‘printMatrix’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printMatrix(matrix, rows, cols);
+              ^~~~~~
+In file included from ../main.c:11:0:
+../arrays.h:13:6: note: expected ‘int **’ but argument is of type ‘int (*)[4]’
+ void printMatrix(int** mat, int rows, int cols);
+      ^~~~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:23:58 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../arrays.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"arrays.d" -MT"arrays.o" -o "arrays.o" "../arrays.c"
+../arrays.c: In function ‘printArray’:
+../arrays.c:13:3: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   printf("%5d", *arr);
+   ^~~~~~
+../arrays.c:13:3: warning: incompatible implicit declaration of built-in function ‘printf’
+../arrays.c:13:3: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../arrays.c: In function ‘printMatrix’:
+../arrays.c:21:3: warning: incompatible implicit declaration of built-in function ‘printf’
+   printf("\n");
+   ^~~~~~
+../arrays.c:21:3: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+Finished building: ../arrays.c
+ 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function ‘main’:
+../main.c:35:14: warning: passing argument 1 of ‘printMatrix’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printMatrix(matrix, rows, cols);
+              ^~~~~~
+In file included from ../main.c:11:0:
+../arrays.h:13:6: note: expected ‘int **’ but argument is of type ‘int (*)[4]’
+ void printMatrix(int** matrix, int rows, int cols);
+      ^~~~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:24:32 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../arrays.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"arrays.d" -MT"arrays.o" -o "arrays.o" "../arrays.c"
+Finished building: ../arrays.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:24:41 **** Incremental Build of configuration Debug for project lab ****
+make all 
+make: Nothing to be done for 'all'.
+14:30:26 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../arrays.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"arrays.d" -MT"arrays.o" -o "arrays.o" "../arrays.c"
+Finished building: ../arrays.c
+ 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function ‘main’:
+../main.c:35:14: warning: passing argument 1 of ‘printMatrix’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printMatrix(matrix, rows, cols);
+              ^~~~~~
+In file included from ../main.c:11:0:
+../arrays.h:13:6: note: expected ‘const int *’ but argument is of type ‘int (*)[4]’
+ void printMatrix(const int* matrix, int rows, int cols);
+      ^~~~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:30:46 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function ‘main’:
+../main.c:35:14: warning: passing argument 1 of ‘printMatrix’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printMatrix(&matrix, rows, cols);
+              ^
+In file included from ../main.c:11:0:
+../arrays.h:13:6: note: expected ‘const int *’ but argument is of type ‘int (*)[3][4]’
+ void printMatrix(const int* matrix, int rows, int cols);
+      ^~~~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:31:38 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:33:23 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../arrays.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"arrays.d" -MT"arrays.o" -o "arrays.o" "../arrays.c"
+Finished building: ../arrays.c
+ 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:35:31 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:36:25 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../arrays.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"arrays.d" -MT"arrays.o" -o "arrays.o" "../arrays.c"
+Finished building: ../arrays.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+14:37:21 **** Incremental Build of configuration Debug for project lab ****
+make all 
+Building file: ../arrays.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"arrays.d" -MT"arrays.o" -o "arrays.o" "../arrays.c"
+Finished building: ../arrays.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./arrays.o ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 

@@ -27,11 +27,11 @@ int main()
 
 	int rows = 3, cols = 4;
 	int matrix[3][4] = {
-			{1,2,3,4},{55,66,77,88},{100,200,300,400}
+			{1,2,3,4},{1,2,3,4},{1,2,3,4}
 	};
 
 	printArray(arr, size);
-	printf("\n\n");
+	printf("\n");
 	printMatrix((int*)matrix, rows, cols);
 	return 0;
 }

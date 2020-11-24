@@ -4,16 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../arrays.c \
 ../main.c \
 ../str_functions.c \
 ../str_quests.c 
 
 OBJS += \
+./arrays.o \
 ./main.o \
 ./str_functions.o \
 ./str_quests.o 
 
 C_DEPS += \
+./arrays.d \
 ./main.d \
 ./str_functions.d \
 ./str_quests.d 

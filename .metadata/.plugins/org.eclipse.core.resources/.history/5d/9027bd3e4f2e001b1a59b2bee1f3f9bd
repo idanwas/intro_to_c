@@ -21,18 +21,9 @@ int main()
 
 	//Q4();
 
-
+	int* arr = {1,2,3,4,5}
 	int size = 5;
-	int arr[5] = {1,2,3,4,5};
-
-	int rows = 3, cols = 4;
-	int matrix[3][4] = {
-			{1,2,3,4},{55,66,77,88},{100,200,300,400}
-	};
-
 	printArray(arr, size);
-	printf("\n\n");
-	printMatrix((int*)matrix, rows, cols);
 	return 0;
 }
 
