@@ -1,0 +1,15 @@
+/*
+ * str_quests.c
+ *
+ *  Created on: 24 Nov 2020
+ *      Author: afeka
+ */
+
+#include <stdio.h>
+
+#include "str_quests.h"
+
+void Q1()
+{
+
+}

@@ -1,0 +1,37 @@
+/*
+ * str_quests.c
+ *
+ *  Created on: 24 Nov 2020
+ *      Author: afeka
+ */
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include "str_quests.h"
+#include "str_functions.h"
+
+void Q1()
+{
+	char str1[MAX], str2[MAX];
+
+	printf("Please enter a string up to %d chars: \n", MAX-1);
+	scanf("%s", str1);
+	printf("String 1 is %s \n", str1);
+
+	getchar(); // clear the buffer from the '\n'
+
+	printf("Please enter a string up to %d chars: \n", MAX-1);
+	fgets(str2, sizeof(str2), stdin);
+	printf("String 2 is ");
+	puts(str2);
+
+	int len1 = strlen(str1), len2 = strlen(str2);
+	if(len1 > len2)
+		printf("The longer string is %s\n", str1);
+	else if(len1 == len2)
+		printf("The two strings having the same length\n");
+	else
+		printf("The longer string is %s\n", str2);
+
+}

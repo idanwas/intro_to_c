@@ -1,0 +1,35 @@
+/*
+ * str_functions.c
+ *
+ *  Created on: 24 Nov 2020
+ *      Author: afeka
+ */
+
+#include <stdio.h>
+#include <string.h>
+
+#include "str_functions.h"
+
+
+char* myGets(char* buf, size_t size)
+{
+	if(buf != NULL && size > 0)
+	{
+		if(fgets(buf, size, stdin))
+		{
+			buf[strcspn(buf, "\n")] = '\0';
+			return buf;
+		}
+		*buf = '\0';
+	}
+	return NULL;
+}
+
+void getLongerStr(char* str1, char* str2, char* longer)
+{
+	if(strlen(str1) > strlen(str2))
+		strcpy(longer, str1);
+	else
+		strcpy(longer, str2);
+	return;
+}

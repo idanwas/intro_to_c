@@ -1,0 +1,25 @@
+14:01:34 **** Build of configuration Debug for project lab ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../str_functions.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"str_functions.d" -MT"str_functions.o" -o "str_functions.o" "../str_functions.c"
+Finished building: ../str_functions.c
+ 
+Building file: ../str_quests.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"str_quests.d" -MT"str_quests.o" -o "str_quests.o" "../str_quests.c"
+Finished building: ../str_quests.c
+ 
+Building target: lab
+Invoking: Cross GCC Linker
+gcc  -o "lab"  ./main.o ./str_functions.o ./str_quests.o   
+Finished building target: lab
+ 
+
+14:01:35 Build Finished. 0 errors, 0 warnings. (took 573ms)
+

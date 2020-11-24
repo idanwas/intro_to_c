@@ -1,0 +1,19 @@
+/*
+ * str_quests.c
+ *
+ *  Created on: 24 Nov 2020
+ *      Author: afeka
+ */
+
+#include <stdio.h>
+
+#include "str_quests.h"
+
+void Q1()
+{
+	char str1[MAX], str2[MAX];
+
+	printf("Please enter a string: \n");
+	scanf("%s", str1);
+
+}

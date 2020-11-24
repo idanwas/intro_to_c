@@ -1,0 +1,17 @@
+/*
+ * str_quests.h
+ *
+ *  Created on: 24 Nov 2020
+ *      Author: afeka
+ */
+
+#ifndef STR_QUESTS_H_
+#define STR_QUESTS_H_
+
+#define MAX 255
+
+void Q1();
+
+void Q2();
+
+#endif /* STR_QUESTS_H_ */
